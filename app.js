@@ -26,7 +26,7 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }));//将服务器的session，放在req.session中
-//
+//hahha
 app.use('/flight', flight);
 app.use('/pltk', pltk);
 app.use('/user', user);
