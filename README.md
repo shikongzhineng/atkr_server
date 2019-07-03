@@ -1,5 +1,8 @@
-# atkr_server
-nodejs 后端
-Project setup
+<<<<<<< HEAD
+# 
+
+## Project setup
+```
 npm install
+```
 
