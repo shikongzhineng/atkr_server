@@ -81,6 +81,10 @@ router.get('/login', (req, res) => {
     } else if (id) {
         arr.push(id);
         str += 'id';
+    }else{
+        console.log(str,'str end');
+        res.send({ code: 404, msg: '用户名是必须的' });
+        return;
     }
     sql = sql + str + '=?'
     console.log(sql);
@@ -99,12 +103,14 @@ router.get('/login', (req, res) => {
 // 用户登录
 router.post('/login', (req, res) => {
     // console.log(req.session,'user login');
+    console.log(req.body);
     var { uname, id, phone, upwd } = req.body;
     if (!upwd) {
         res.send({ code: 404, msg: '密码是必须的' });
         return;
     }
     // console.log(upwd);
+    console.log( uname, id, phone, upwd )
     var arr = [upwd];
     let sql = 'select uid from user where upwd=md5(?) and ';
     var str = '';
@@ -117,6 +123,10 @@ router.post('/login', (req, res) => {
     } else if (id) {
         arr.push(id);
         str += 'id';
+    }else{
+        console.log(str,'str end');
+        res.send({ code: 404, msg: '用户名是必须的' });
+        return;
     }
     sql = sql + str + '=?'
     console.log(sql);
