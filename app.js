@@ -12,7 +12,7 @@ const admin = require('./routes/admin.js');
 var app = express();
 //处理跨域请求
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://localhost:8000', 'http://127.0.0.1:8000', 'http://176.233.2.49:8080','http://176.233.2.37:8080','http://176.233.2.59'],
+  origin: ['http://localhost:8080', 'http://127.0.0.1:8080', 'http://localhost:8000', 'http://127.0.0.1:8000'],
   credentials: true
 }))
 // 监听端口
